@@ -61,3 +61,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Sprockets 4.0.0 causes errors
 gem 'sprockets', '~> 3.7.2'
+
+#Use Devise
+gem 'devise'
