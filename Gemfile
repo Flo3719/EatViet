@@ -64,3 +64,6 @@ gem 'sprockets', '~> 3.7.2'
 
 #Use Devise
 gem 'devise'
+
+#Use Geocoder
+gem 'geocoder'

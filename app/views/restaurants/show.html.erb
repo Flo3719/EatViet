@@ -1,0 +1,7 @@
+<header><h1 class="display-4"><%= @restaurant.name %></h1></header>
+
+<p>Address: <%= @restaurant.address %></p>
+<p>Coordinates: <%= @restaurant.latitude %> <%= @restaurant.longitude %></p>
+
+<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@restaurant.latitude},#{@restaurant.longitude}&markers=#{@restaurant.latitude},#{@restaurant.longitude}&zoom=7&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
+              class: 'img-fluid img-rounded', alt: "#{@restaurant.name} on the map"%>
