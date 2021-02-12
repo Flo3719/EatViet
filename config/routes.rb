@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   resources :posts do 
     resources :comments
   end
+
+  resources :restaurants, except: [:update, :edit, :destroy]
+
+  #get 'restaurants' => 'restaurants#index', as: 'restaurants'
+
 end
