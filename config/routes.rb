@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   end
 
   resources :restaurants, except: [:update, :edit, :destroy] do
-    resources :items
+    resources :items do 
+      resources :translations
+    end
   end  
 
   #get 'restaurants' => 'restaurants#index', as: 'restaurants'
