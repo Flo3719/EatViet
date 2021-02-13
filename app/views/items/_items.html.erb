@@ -1,0 +1,8 @@
+<h3>Menu</h3>
+<% @restaurant.items.each do |item| %>
+  <div class="card card-body bg-light m-1">
+    <p>
+      <strong><%= item.name %>: <%= item.price %></strong>
+    </p>
+  </div>
+<% end %>
