@@ -67,3 +67,6 @@ gem 'devise'
 
 #Use Geocoder
 gem 'geocoder'
+
+#Debugger Pry
+gem 'pry'

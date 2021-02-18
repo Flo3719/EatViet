@@ -15,11 +15,10 @@ class ItemsController < ApplicationController
     @item.destroy
     redirect_to restaurant_path(@restaurant)
   end
-  
+
   private
   
   def item_params
     params.require(:item).permit(:name, :price, :translation)
   end
-  
 end

@@ -26,6 +26,11 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.select(:type, options_for_select([['Tourist', 'Tourist'], ['Translator','Translator']]))%>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
