@@ -2,8 +2,8 @@
 <% @restaurant.items.each do |item| %>
   <div class="card card-body bg-light m-1">
     <p>
-      <strong><%= item.translation %>: $<%= sprintf('%.2f', item.dollarPrice) %></strong>
-      (<%= sprintf('%.0f', item.price ) %>₫), <%=item.name %>
+      <strong><%= item.translation.empty? ? item.name : item.translation %>: $<%= sprintf('%.2f', item.dollarPrice) %></strong>
+      (<%= sprintf('%.0f', item.price ) %>₫)<%= ", " + item.name unless item.translation.empty?%>
       <%= link_to '[X]', [item.restaurant, item], method: :delete, data: {confirm: 'Are you sure?'}%>
     </p>
   </div>
