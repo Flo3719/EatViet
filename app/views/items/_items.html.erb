@@ -4,7 +4,7 @@
     <p>
       <strong><%= item.translation.empty? ? item.name : item.translation %>: $<%= sprintf('%.2f', item.dollarPrice) %></strong>
       (<%= sprintf('%.0f', item.price ) %>₫)<%= ", " + item.name unless item.translation.empty?%>
-      <%= link_to '[X]', [item.restaurant, item], method: :delete, data: {confirm: 'Are you sure?'}%>
+      <%= link_to '[X]', [item.restaurant, item], method: :delete, data: {confirm: 'Are you sure?'} if current_user&.type == "Translator"%>
     </p>
   </div>
 <% end %>
