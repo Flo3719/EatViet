@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'restaurants#index', as: 'home'
+  root to: 'pages#landing', as: 'home'
 
   get 'about' => 'pages#about', as: 'about'
+  get 'landing' => 'pages#landing', as: 'landing'
 
   resources :posts do 
     resources :comments

@@ -3,4 +3,8 @@ class PagesController < ApplicationController
         @title = "About Us"
         @content = "This is the about page"
     end
+    def landing
+        @title = "Landingpage"
+        @content = "This is the landingpage"
+    end
 end
