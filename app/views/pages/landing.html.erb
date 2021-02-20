@@ -1,7 +1,26 @@
 <h1>EatViet</h1>
 <h2>Menu Translations for Vietnamese Restaurants</h2>
-<div class="jumbotron" >
-  <h3>Why?</h3>
-  <p>If you are travelling in Vietnam, you will notice that a lot of the cheaper, local restaurants don't have english menues.
-  The Vietnamese language is hard to translate using a translation app due to the variety of accent letters.</p>
+<div class="container">
+  <div class="row align-items-start">
+    <div class="bg-light col mx-2" >
+      <h3>The Problem</h3>
+      <p>If you are travelling in Vietnam, you will notice that a lot of the cheaper, local restaurants don't have english menues.
+      The Vietnamese language is hard to translate using a translation app due to the variety of accent letters.</p>
+    </div>
+    <div class="bg-light col mx-2" >
+      <h3>The Solution: EatViet</h3>
+      <p>Where ever you are, just check on EatViet for restaurants close to your location. The Menus are translated to english by local people who are paid by the ads you see.</p>
+    </div>
+  </div>
 </div>
+<div class="container">
+  <div class="row position-relative">
+    <div class="col text-center">
+      <%= link_to "Get Started", new_user_registration_path, class: 'btn btn-danger' %>
+    </div>
+    <div class="col text-center">
+      <%= link_to "Become a Translator", new_user_registration_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
+</div>
+
