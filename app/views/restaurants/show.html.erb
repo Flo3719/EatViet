@@ -2,9 +2,8 @@
 
 <p>Address: <%= @restaurant.address %></p>
 <p>Coordinates: <%= @restaurant.latitude %> <%= @restaurant.longitude %></p>
-
-<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@restaurant.latitude},#{@restaurant.longitude}&markers=#{@restaurant.latitude},#{@restaurant.longitude}&zoom=7&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
-              class: 'img-fluid img-rounded', alt: "#{@restaurant.name} on the map"%>
+<%= render 'map' %>
+<%= image_tag street_view(center: @restaurant.address) %>
 <hr>
 <%= render 'items/items' %>
 <%= render 'items/form' if current_user&.type == "Translator" %>
