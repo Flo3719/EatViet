@@ -70,3 +70,6 @@ gem 'geocoder'
 
 #Debugger Pry
 gem 'pry'
+
+#Payment
+gem 'stripe'

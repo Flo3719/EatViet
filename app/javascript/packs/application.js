@@ -9,6 +9,8 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+require("packs/subscriptions")
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

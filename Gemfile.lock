@@ -96,7 +96,7 @@ GEM
     geocoder (1.6.5)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    i18n (1.8.8)
+    i18n (1.8.9)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
@@ -200,6 +200,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    stripe (5.29.1)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -253,6 +254,7 @@ DEPENDENCIES
   spring
   sprockets (~> 3.7.2)
   sqlite3 (~> 1.4)
+  stripe
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
