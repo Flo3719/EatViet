@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   
   get 'about' => 'pages#about', as: 'about'
   get 'landing' => 'pages#landing', as: 'landing'
+  get 'payment_success' => 'pages#payment_success', as: 'payment_success'
+  get 'payment_failure' => 'pages#payment_failure', as: 'payment_failure'
 
   resources :posts do 
     resources :comments
