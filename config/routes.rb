@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   resources :subscriptions
 
+  resources :checkouts
+
   resources :restaurants, except: [:update, :edit, :destroy] do
     resources :items do 
       resources :translations

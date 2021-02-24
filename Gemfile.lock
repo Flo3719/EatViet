@@ -123,6 +123,9 @@ GEM
     nokogiri (1.11.1-arm64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pp (0.2.0)
+      prettyprint
+    prettyprint (0.1.0)
     pry (0.14.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -245,6 +248,7 @@ DEPENDENCIES
   geocoder
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  pp
   pry
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)

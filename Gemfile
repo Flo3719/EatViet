@@ -73,3 +73,6 @@ gem 'pry'
 
 #Payment
 gem 'stripe'
+
+#PrettyPrint
+gem 'pp'

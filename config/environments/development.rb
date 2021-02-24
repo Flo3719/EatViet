@@ -78,4 +78,8 @@ Rails.application.configure do
 
   #User master key
   config.require_master_key = true
+
+  #Allow Ngrok webhook
+  config.hosts << "33615a31d7ab.ngrok.io"
+
 end

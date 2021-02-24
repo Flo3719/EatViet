@@ -13,7 +13,6 @@ module Stonks
 
     
     config.web_console.whitelisted_ips = '172.18.0.1'
-    
 
     # Configuration for the application, engines, and railties goes here.
     #

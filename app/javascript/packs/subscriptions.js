@@ -5,7 +5,7 @@ document.addEventListener("turbolinks:load", function() {
   var checkoutButton = document.getElementById("checkout-button");
 
   checkoutButton.addEventListener("click", function () {
-    fetch("/subscriptions", {
+    fetch("/checkouts", {
       method: "POST",
     })
       .then(function (response) {
