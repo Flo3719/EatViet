@@ -4,7 +4,7 @@ class CheckoutsController < ApplicationController
 
   def new
     if user_signed_in? && current_user.subscribed?
-      redirect_to home_path, notice: "You are already a subscriber"
+      redirect_to restaurants_path
     end
   end
 
