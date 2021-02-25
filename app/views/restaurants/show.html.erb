@@ -2,8 +2,13 @@
 
 <p>Address: <%= @restaurant.address %></p>
 <p>Coordinates: <%= @restaurant.latitude %> <%= @restaurant.longitude %></p>
-<%= render 'map' %>
-<%= image_tag street_view(center: @restaurant.address) %>
-<hr>
-<%= render 'items/items' %>
-<%= render 'items/form' if current_user&.type == "Translator" %>
+<div class="row">
+  <div class="col">
+    <%= render 'map' %>
+  </div>
+  <div class="col">
+    <%= render 'items/items' %>
+    <%= render 'items/form' if current_user&.type == "Translator" %>
+  </div>
+</div>
+

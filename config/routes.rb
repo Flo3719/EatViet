@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   authenticated do
-    root :to => 'restaurants#index', as: :authenticated
+    root :to => 'checkouts#new', as: :authenticated
   end
+
 
   root to: 'pages#landing', as: 'home'
   

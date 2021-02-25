@@ -4,5 +4,5 @@
   style="border:0"
   loading="lazy"
   allowfullscreen
-  src="https://www.google.com/maps/embed/v1/place?key=<%= Rails.application.credentials.maps_api %>&q=<%= @restaurant.address %>">
+  src="https://www.google.com/maps/embed/v1/place?key=<%= Rails.application.credentials.maps_api %>&q=<%= @restaurant&.address || "Berliner Tor 1, Hamburg" %>">
 </iframe>

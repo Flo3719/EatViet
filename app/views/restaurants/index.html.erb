@@ -2,10 +2,13 @@
 
 <%= link_to 'Add restaurant', new_restaurant_path, class: 'btn btn-primary btn-lg' %>
 
-<div class="card">
-  <div class="card-block">
-    <ul>
+<div class="card my-3">
+  <div class="row">
+    <div class="col">
+      <%= render 'map' %>
+    </div>
+    <div class="col">
       <%= render @restaurants %>
-    </ul>
+    </div>
   </div>
 </div>

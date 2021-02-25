@@ -7,4 +7,10 @@ module RestaurantsHelper
     &fov=80&heading=0&pitch=0
     &key=" + Rails.application.credentials.maps_api
   end
+  def current_location
+    ip = request.remote_ip
+    query = Geocoder.search(ip)
+    puts("!!!!!!!: " + query.first.coordinates.to_s)
+    query.first.coordinates
+  end
 end
