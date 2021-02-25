@@ -1,7 +1,5 @@
 <header><h1 class="display-4">Restaurants</h1></header>
-
-<%= link_to 'Add restaurant', new_restaurant_path, class: 'btn btn-primary btn-lg' %>
-
+<%= link_to 'Add restaurant', new_restaurant_path, class: 'btn btn-primary btn-lg' if current_user&.type == "Translator"%>
 <div class="card my-3">
   <div class="row">
     <div class="col">

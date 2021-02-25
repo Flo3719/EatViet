@@ -3,7 +3,10 @@ class CheckoutsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def new
-    if user_signed_in? && current_user.subscribed?
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
+    if user_signed_in? && (current_user.subscribed? or current_user.type == "Translator") 
       redirect_to restaurants_path
     end
   end

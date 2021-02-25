@@ -1,4 +1,6 @@
 class RestaurantsController < ApplicationController
+  before_action :require_subscription
+
   def index
     @restaurants = Restaurant.order('created_at DESC')
   end
@@ -26,4 +28,13 @@ class RestaurantsController < ApplicationController
   def restaurant_params
     params.require(:restaurant).permit(:name, :address)
   end  
+
+  private
+
+  def require_subscription
+      unless user_signed_in? && current_user.subscribed?
+        flash[:error] = "You must subscribe to access this section"
+        redirect_to new_checkout_path
+      end
+  end
 end

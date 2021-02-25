@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     root :to => 'checkouts#new', as: :authenticated
   end
 
-
   root to: 'pages#landing', as: 'home'
   
   get 'about' => 'pages#about', as: 'about'
