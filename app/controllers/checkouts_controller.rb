@@ -12,20 +12,6 @@ class CheckoutsController < ApplicationController
     Stripe.api_key = Rails.application.credentials.stripe_api_key
     price_id = "price_1IMxXDBmXNf1hQuxQtstKyH7"
     price = Stripe::Price.retrieve(price_id)
-    token = params[:stripeToken]
-
-        # customer = if current_user.stripe_id?
-    #             Stripe::Customer.retrieve({
-    #               id: current_user.stripe_id,
-    #               expand: ['subscriptions']
-    #             })
-    #            else
-    #             Stripe::Customer.create({
-    #               email: current_user.email, 
-    #               source: token,
-    #               expand: ['subscriptions']
-    #             })
-    #           end
 
     session = Stripe::Checkout::Session.create({
       payment_method_types: ['card'],
@@ -34,11 +20,12 @@ class CheckoutsController < ApplicationController
         quantity: 1,
       }],
       mode: 'subscription',
-      # These placeholder URLs will be replaced in a following step.
       success_url: payment_success_url,
       cancel_url: payment_failure_url,
     })
     message = {:id => session.id }
+    current_user.update(checkout_session_id: session.id)
+
     render :json => message
   end
 end

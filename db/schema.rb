@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_20_180646) do
+ActiveRecord::Schema.define(version: 2021_02_25_150721) do
 
   create_table "comments", force: :cascade do |t|
     t.string "username"
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 2021_02_20_180646) do
     t.string "username"
     t.string "type"
     t.string "stripe_id"
-    t.string "stripe_subscription_id"
+    t.string "checkout_session_id"
     t.string "card_last4"
     t.integer "card_exp_month"
     t.integer "card_exp_year"

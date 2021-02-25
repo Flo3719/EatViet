@@ -3,25 +3,14 @@ class SubscriptionsController < ApplicationController
   skip_before_action :verify_authenticity_token
   
   def create
+    event = Stripe::Event.retrieve(params[:id])
     options = {
-      stripe_id: request.parameters[:data][:customer],
+      stripe_id: event[:data][:object][:customer],
       subscribed: true
     }
-    current_user.update(options)
-  end
-
-    #plan_id = params[:plan_id]
-
-    # payment_intent = Stripe::PaymentIntent.create(
-    #   amount: 1000,
-    #   currency: 'eur',
-    # )
-    # {
-    #   clientSecret: payment_intent['client_secret'],
-    # }.to_json
-
-    # redirect_to home_path, notice: "Your subscription was setup successfully!"
-  
+    user = User.find_by(checkout_session_id: request.parameters[:data][:object][:id])
+    user.update(options)
+  end  
 
   def destroy
     customer = Stripe::Customer.retrieve(current_user.stripe_id)
