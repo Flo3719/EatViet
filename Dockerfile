@@ -21,4 +21,5 @@ EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
 
 RUN bundle install
+RUN yarn install
 RUN bundle exec rails assets:precompile
