@@ -5,6 +5,9 @@ COPY Gemfile /stonks/Gemfile
 COPY Gemfile.lock /stonks/Gemfile.lock
 COPY . /stonks
 
+ARG RAILS_MASTER_KEY
+ENV RAILS_MASTER_KEY "$RAILS_MASTER_KEY"
+
 #Install newest npm and yarn
 RUN curl -sL https://deb.nodesource.com/setup_12.x  | bash -
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add
