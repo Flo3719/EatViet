@@ -23,6 +23,8 @@ EXPOSE 3000
 # Start the main process.
 CMD ["rails", "server", "-b", "0.0.0.0"]
 
+RUN touch config/master.key && "$RAILS_MASTER_KEY" > config/master.key
+
 RUN bundle install
 RUN yarn install
 RUN bundle exec rails assets:precompile
