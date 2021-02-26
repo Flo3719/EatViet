@@ -2,7 +2,10 @@ class RestaurantsController < ApplicationController
   before_action :require_subscription
 
   def index
-    @restaurants = Restaurant.order('created_at DESC')
+    if Rails.env.production?
+      @user_location = request.location.address
+    end
+    @restaurants = Restaurant.order('created_at DESC')    
   end
 
   def new 
