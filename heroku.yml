@@ -1,5 +1,7 @@
 build:
   docker:
     web: Dockerfile
+  config:
+    RAILS_MASTER_KEY: $RAILS_MASTER_KEY
 run: 
   web: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
