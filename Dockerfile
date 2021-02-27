@@ -5,7 +5,7 @@ COPY Gemfile /stonks/Gemfile
 COPY Gemfile.lock /stonks/Gemfile.lock
 COPY . /stonks
 
-#RUN value=$(<masterkey) && export RAILS_MASTER_KEY=$value
+RUN value=$(<./config/master.key) && export RAILS_MASTER_KEY=$value
 
 #Install newest npm and yarn
 RUN curl -sL https://deb.nodesource.com/setup_12.x  | bash -
