@@ -5,7 +5,7 @@ COPY Gemfile /stonks/Gemfile
 COPY Gemfile.lock /stonks/Gemfile.lock
 COPY . /stonks
 
-RUN value=$(<./config/master.key) && export RAILS_MASTER_KEY=$value
+#RUN value=$(<./config/master.key) && export RAILS_MASTER_KEY=$value
 
 #Install newest npm and yarn
 RUN curl -sL https://deb.nodesource.com/setup_12.x  | bash -
@@ -20,7 +20,7 @@ ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
 
 # Start the main process.
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["echo", "$RAILS_MASTER_KEY > ./config/master.key", "&&", "rails", "server", "-b", "0.0.0.0"]
 
 RUN bundle install
 
