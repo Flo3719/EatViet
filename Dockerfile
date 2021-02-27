@@ -20,7 +20,7 @@ ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
 
 # Start the main process.
-CMD ["echo", "$RAILS_MASTER_KEY > ./config/master.key", "&&", "rails", "server", "-b", "0.0.0.0"]
+CMD ["rails", "server", "-b", "0.0.0.0"]
 
 RUN bundle install
 
