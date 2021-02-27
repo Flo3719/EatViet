@@ -4,5 +4,5 @@
   style="border:0"
   loading="lazy"
   allowfullscreen
-  src="https://www.google.com/maps/embed/v1/place?key=<%= Rails.application.credentials.maps_api %>&q=<%= @restaurant&.address || @user_location %>">
+  src="https://www.google.com/maps/embed/v1/place?key=<%= Rails.application.credentials.maps_api %>&q=<%= @restaurant&.address || "kiki's backepackers ha giang" ||@user_location %>">
 </iframe>
