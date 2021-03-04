@@ -126,6 +126,7 @@ GEM
     nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.2.3)
     pp (0.2.0)
       prettyprint
     prettyprint (0.1.0)
@@ -205,7 +206,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     stripe (5.29.1)
     thor (1.1.0)
     tilt (2.0.10)
@@ -252,6 +252,7 @@ DEPENDENCIES
   geocoder
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  pg
   pp
   pry
   puma (~> 5.0)
@@ -261,7 +262,6 @@ DEPENDENCIES
   selenium-webdriver
   spring
   sprockets (~> 3.7.2)
-  sqlite3 (~> 1.4)
   stripe
   turbolinks (~> 5)
   tzinfo-data
