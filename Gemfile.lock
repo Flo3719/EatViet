@@ -65,6 +65,7 @@ GEM
     autoprefixer-rails (10.2.4.0)
       execjs
     bcrypt (3.1.16)
+    bcrypt (3.1.16-arm64-darwin-20)
     bindex (0.8.1)
     bootsnap (1.7.0)
       msgpack (~> 1.0)
@@ -121,6 +122,8 @@ GEM
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     nokogiri (1.11.1-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pp (0.2.0)
@@ -237,6 +240,7 @@ GEM
 PLATFORMS
   aarch64-linux
   arm64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   autoprefixer-rails

@@ -6,7 +6,7 @@ class CheckoutsController < ApplicationController
     unless user_signed_in?
       redirect_to new_user_session_path
     end
-    if user_signed_in? && (current_user.subscribed? or current_user.type == "Translator") 
+    if user_signed_in? && current_user.subscribed? 
       redirect_to restaurants_path
     end
   end
