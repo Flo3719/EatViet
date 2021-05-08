@@ -14,5 +14,20 @@
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context 'test validation' do
+    let(:restaurant) { create(:restaurant) }
+
+    it 'ensures name is present' do
+      item = Item.new(price: '100000', translation: 'Sandwich', restaurant: restaurant).save
+      expect(item).to eq(false)
+    end
+    it 'ensures item belongs to restaurant' do
+      item = Item.new(price: '100000', translation: 'Sandwich').save
+      expect(item).to eq(false)
+    end
+    it 'should validate' do
+      item = Item.new(name: 'Banh Mi', price: '100000', translation: 'Sandwich', restaurant: restaurant).save
+      expect(item).to eq(true)
+    end
+  end
 end

@@ -14,4 +14,13 @@ class Restaurant < ApplicationRecord
   has_many :items
   geocoded_by :address
   after_validation :geocode, if: -> (obj){obj.address.present? and obj.address_changed?}
+
+  validates :name, presence: true
+  validates :address, presence: true
+
+  validate :validate_address
+
+  def validate_address 
+    true
+  end
 end
