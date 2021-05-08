@@ -12,6 +12,7 @@
 #
 FactoryBot.define do
   factory :restaurant do
-    
+    name { Faker::Restaurant.name }
+    address { "Neustraße 1, 48599 Gronau" }
   end
 end

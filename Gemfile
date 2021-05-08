@@ -40,6 +40,7 @@ group :development, :test do
   # Testing software
   gem 'rspec-rails', ">= 3.9.0"
   gem 'factory_bot_rails'
+  gem 'faker'
   # Since ruby 3.0.0 rexml needs to be installed for rspec
   gem 'rexml'
 end
