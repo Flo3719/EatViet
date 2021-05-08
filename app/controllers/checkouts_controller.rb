@@ -28,7 +28,7 @@ class CheckoutsController < ApplicationController
     })
     message = {:id => session.id }
     current_user.update(checkout_session_id: session.id)
-
+    
     render :json => message
   end
 end
