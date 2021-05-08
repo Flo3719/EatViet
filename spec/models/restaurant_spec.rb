@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: restaurants
+#
+#  id         :bigint           not null, primary key
+#  address    :text
+#  latitude   :float
+#  longitude  :float
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 require 'rails_helper'
 
 RSpec.describe Restaurant, type: :model do
