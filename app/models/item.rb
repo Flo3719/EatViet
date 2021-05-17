@@ -17,6 +17,8 @@ class Item < ApplicationRecord
   validates :price, presence: true, length: {minimum: 1}
   before_save :calculateDollarPrice
 
+  broadcasts
+
   private 
 
   def calculateDollarPrice

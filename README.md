@@ -13,3 +13,10 @@ docker buildx ls
 docker buildx use amdbuilder     
 docker buildx build --platform linux/arm64,linux/amd64 --push -t florianfahrenholz/eatviet:latest . --build-arg RAILS_MASTER_KEY=5163a2b08e128e104b9a1f295e813df3
 
+# Local development without Docker:
+
+Start Postgres:
+`postgres -D /usr/local/var/postgres`
+
+Start Server:
+`bundle exec rails s`
