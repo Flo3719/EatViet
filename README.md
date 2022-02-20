@@ -1,6 +1,15 @@
-# README
+# EatViet
+Menu Translations for Vietnamese Restaurants.
 
-Deployment:
+## The Problem
+If you are travelling in Vietnam, you will notice that a lot of the cheaper, local restaurants don't have english menus. The Vietnamese language is hard to translate using a translation app due to the variety of accent letters.
+
+## The Solution: **EatViet**
+Where ever you are, just check on EatViet for restaurants close to your location. The Menus are translated to english by local people who are paid by the ads you see.
+
+<hr>
+
+# Deployment:
 
 Push to heroku containers using: `heroku container:push web --arg RAILS_MASTER_KEY=xxxSecret123` to pass master.key.
 
